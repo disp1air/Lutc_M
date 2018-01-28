@@ -8,3 +8,5 @@ print(myfile.title)
 print(2 ** 100)
 x = 'Spam'
 print(x * 8)            #repeat string
+
+print(dir(myfile))
