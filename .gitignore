@@ -2,3 +2,6 @@
 
 __pycache__/
 .vscode
+
+Chapter_27/persondb.dat
+Chapter_27/persondb.dir

@@ -1,3 +1,5 @@
+from classtools import AttrDisplay
+
 # добавлен метод __str__ реализующий вывод объектов
 class Person:
     def __init__(self, name, job = None, pay = 0):
@@ -11,8 +13,8 @@ class Person:
     def giveRaise(self, percent):
         self.pay = int(self.pay * (percent + 1))
 
-    def __str__(self):
-        return '[Person: %s, %s, %s]' % (self.name, self.job, self.pay)
+#    def __str__(self):
+#        return '[Person: %s, %s, %s]' % (self.name, self.job, self.pay)
 
 class Manager(Person):
     def __init__(self, name, pay):
