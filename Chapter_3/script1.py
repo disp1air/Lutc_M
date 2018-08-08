@@ -1,4 +1,4 @@
-#First script on Python lang
+# First script on Python lang
 import sys              #load library module
 import myfile
 
