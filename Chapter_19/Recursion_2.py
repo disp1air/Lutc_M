@@ -8,3 +8,5 @@ def sumtree(L):
         else:
             total += sumtree(x)
     return total    
+
+print(sumtree(L))
