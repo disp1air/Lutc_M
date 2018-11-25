@@ -65,40 +65,40 @@
 \_\_bases\_\_, который является кортежем, содержащим ссылки на суперклассы выше в дереве наследования.
 
                                     >>> x = sub()
-                                    >>> x.\_\_dict\_\_                 # словарь пространства имен экземпляра
+                                    >>> x.__dict__                 # словарь пространства имен экземпляра
                                     {}
 
-                                    >>> x.\_\_class\_\_                # класс экземпляра
-                                    <class '\_\_main\_\_.sub'>
+                                    >>> x.__class__                # класс экземпляра
+                                    <class '__main__.sub'>
 
-                                    >>> sub.\_\_bases\_\_              # суперклассы данного класса
-                                    (<class '\_\_main\_\_.super'>,)
+                                    >>> sub.__bases__              # суперклассы данного класса
+                                    (<class '__main__.super'>,)
 
-                                    >>> super.\_\_bases\_\_
+                                    >>> super.__bases__
                                     (<class 'object'>,)
 
                                     >>> X.hello()
-                                    >>> X.\_\_dict\_\_
+                                    >>> X.__dict__
                                     {'data1': 'spam'}
 
                                     >>> X.hola()
-                                    >>> X.\_\_dict\_\_
+                                    >>> X.__dict__
                                     {'data1': 'spam', 'data2': 'eggs'}
-                                    >>> sub.\_\_dict\_\_.keys()
-                                    ['\_\_module\_\_', '\_\_doc\_\_', 'hola']
-                                    >>> super.\_\_dict\_\_.keys()
-                                    ['\_\_dict\_\_', '\_\_module\_\_', '\_\_weakref\_\_', 'hello', '\_\_doc\_\_'>]
+                                    >>> sub.__dict__.keys()
+                                    ['__module__', '__doc__', 'hola']
+                                    >>> super.__dict__.keys()
+                                    ['__dict__', '__module__', '__weakref__', 'hello', '__doc__'>]
 
 Так как атрибуты фактически являются ключами словаря, существует два способа получать и изменять их значения – по квалифицированным именам или индексированием по ключу:
 
-                                    >>> X.data1, X.\_\_dict\_\_['data1']
+                                    >>> X.data1, X.__dict__['data1']
                                     ('spam', 'spam')
 
                                     >>> X.data3 = 'toast'
-                                    >>> X.\_\_dict\_\_
+                                    >>> X.__dict__
                                     {'data1': 'spam', 'data3': 'toast', 'data2': 'eggs'}
 
-                                    >>> X.\_\_dict\_\_['data3'] = 'ham'
+                                    >>> X.__dict__['data3'] = 'ham'
                                     >>> X.data3
                                     'ham'
 
